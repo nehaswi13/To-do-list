@@ -1,0 +1,150 @@
+/* General Styles */
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.home {
+  padding: 20px;
+}
+
+body {
+  position: relative; /* To position the pseudo-element correctly */
+  overflow: hidden; /* Ensures the blurred image stays within the viewport */
+  height: 100vh;
+  margin: 0;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://cheqmark.io/blog/wp-content/uploads/2023/03/what-is-checklist.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(px); /* Apply the blur effect here */
+  z-index: -1; /* Puts the blurred image behind the content */
+}
+
+
+/* Task Form */
+.task-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.task-input {
+  width: 300px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+.add-task-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-task-button:hover {
+  background-color: #218838;
+}
+
+/* Task Sections in Row */
+.task-sections {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Task Section Box */
+.task-section {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 23%;
+  padding: 10px;
+}
+
+.task-section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  background-color: lightgoldenrodyellow;
+  border-radius: 4px;
+}
+
+/* Task Lists */
+.task-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-section li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.move-to-ongoing {
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.move-to-ongoing:hover {
+  background-color: darkorange;
+}
+
+.move-to-completed {
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.move-to-completed:hover {
+  background-color: darkgreen;
+}
+
+/* Normal Delete Button (Same Color as Other Buttons) */
+.delete-task-button {
+  background-color: red; /* Blue color */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-task-button:hover {
+  background-color: red; /* Darker blue */
+}
+
+/* Deleted Section (Styled Similar to Other Sections) */
+.deleted-section {
+
+  border-color: #f5c6cb;
+}
+
+.deleted-section h2 {
+  background-color: lightgoldenrodyellow;
+  color: black;
+}
